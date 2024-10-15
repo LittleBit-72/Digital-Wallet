@@ -1,0 +1,137 @@
+/* style.css */
+
+/* Reset margin dan padding untuk semua elemen, serta mengatur box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling untuk elemen body */
+body {
+    /* Mengatur font dasar untuk keseluruhan halaman */
+    font-family: Arial, sans-serif;
+    
+    /* Menggunakan linear-gradient untuk background dengan perpaduan warna biru dan hijau */
+    background: linear-gradient(135deg, #1E90FF, #8eff8e);
+    
+    /* Memastikan halaman mengisi tinggi viewport */
+    min-height: 100vh;
+    
+    /* Menggunakan flexbox untuk pusatkan konten secara horizontal dan vertikal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Mengatur warna teks default menjadi putih */
+    color: #fff;
+}
+
+/* Styling untuk container utama yang menampung konten setiap halaman */
+.container {
+    /* Memberikan latar belakang hitam semi-transparan agar teks lebih terbaca */
+    background: rgba(0, 0, 0, 0.5);
+    
+    /* Padding dalam container */
+    padding: 40px;
+    
+    /* Membuat sudut container melengkung */
+    border-radius: 10px;
+    
+    /* Lebar container responsif */
+    width: 90%;
+    max-width: 400px;
+    
+    /* Mengatur teks agar rata tengah */
+    text-align: center;
+}
+
+/* Styling untuk judul utama */
+h1 {
+    /* Margin bawah untuk memberikan jarak dari elemen berikutnya */
+    margin-bottom: 20px;
+    
+    /* Ukuran font yang lebih besar untuk judul */
+    font-size: 2em;
+}
+
+/* Styling untuk form */
+form {
+    /* Mengatur form agar elemen di dalamnya tersusun secara vertikal */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling untuk input teks, email, dan password */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    /* Padding dalam input */
+    padding: 10px;
+    
+    /* Margin atas dan bawah untuk jarak antar input */
+    margin: 10px 0;
+    
+    /* Menghilangkan border default */
+    border: none;
+    
+    /* Membuat sudut input melengkung */
+    border-radius: 5px;
+}
+
+/* Styling untuk tombol */
+button {
+    /* Padding dalam tombol */
+    padding: 10px;
+    
+    /* Margin atas untuk jarak dari elemen sebelumnya */
+    margin-top: 10px;
+    
+    /* Menghilangkan border default */
+    border: none;
+    
+    /* Membuat sudut tombol melengkung */
+    border-radius: 5px;
+    
+    /* Warna latar belakang tombol */
+    background-color: #fff;
+    
+    /* Warna teks tombol */
+    color: #1E90FF;
+    
+    /* Menebalkan teks tombol */
+    font-weight: bold;
+    
+    /* Mengubah kursor saat hover */
+    cursor: pointer;
+    
+    /* Transisi halus untuk efek hover */
+    transition: background-color 0.3s;
+}
+
+/* Efek hover untuk tombol */
+button:hover {
+    /* Mengubah warna latar belakang saat tombol di-hover */
+    background-color: #f0f0f0;
+}
+
+/* Styling untuk link */
+a {
+    /* Mengatur warna teks link */
+    color: #ADD8E6;
+    
+    /* Menghilangkan garis bawah default pada link */
+    text-decoration: none;
+    
+    /* Margin atas untuk jarak dari elemen sebelumnya */
+    margin-top: 15px;
+    
+    /* Menampilkan link sebagai blok agar bisa diatur margin */
+    display: inline-block;
+}
+
+/* Efek hover untuk link */
+a:hover {
+    /* Menambahkan garis bawah saat link di-hover */
+    text-decoration: underline;
+}
