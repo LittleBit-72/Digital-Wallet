@@ -1,42 +1,59 @@
-<!-- login.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <!-- Mengatur karakter set yang digunakan -->
     <meta charset="UTF-8">
-    
-    <!-- Kompatibilitas dengan Internet Explorer -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Mengatur viewport untuk responsivitas di perangkat mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Judul halaman yang tampil di tab browser -->
     <title>Login - Digital Wallet</title>
-    
-    <!-- Link ke file CSS eksternal -->
+    <!-- Menghubungkan dengan file CSS eksternal -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Container utama yang menampung seluruh konten halaman -->
+
     <div class="container">
-        <!-- Judul halaman Login -->
-        <h1>Login</h1>
-        
-        <!-- Formulir untuk proses login -->
-        <form action="#" method="POST">
-            <!-- Input untuk email pengguna -->
-            <input type="email" placeholder="Email" required>
-            
-            <!-- Input untuk password pengguna -->
-            <input type="password" placeholder="Password" required>
-            
-            <!-- Tombol untuk submit form -->
-            <button type="submit">Masuk</button>
+        <h2>Login</h2>
+        <!-- Form login -->
+        <form id="loginForm">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit" class="login-btn">Login</button>
         </form>
-        
-        <!-- Link untuk mengarahkan pengguna yang belum memiliki akun ke halaman Register -->
-        <a href="register.html">Belum punya akun? Register di sini</a>
+
+        <!-- Link ke halaman register -->
+        <p>Belum memiliki akun? <a href="register.html">Daftar di sini</a></p>
     </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Kamu berhasil login!</div>
+
+    <script>
+        // Fungsi untuk menampilkan toast
+        function showToast() {
+            var toast = document.getElementById("toast");
+            toast.className = "toast show"; // Tambahkan kelas 'show' untuk menampilkan toast
+
+            // Setelah 3 detik, sembunyikan toast
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+
+        // Event listener untuk login form submit
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah form di-submit
+
+            // Validasi sederhana
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username && password) {
+                // Jika username dan password sudah diisi, tampilkan toast
+                showToast();
+
+                // Redirect ke home.html setelah 3 detik (saat toast menghilang)
+                setTimeout(function() {
+                    window.location.href = "home.html"; // Pindah ke halaman home.html
+                }, 3000);
+            }
+        });
+    </script>
+
 </body>
 </html>
