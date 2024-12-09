@@ -22,7 +22,7 @@
         <p>Belum memiliki akun? <a href="register.html">Daftar di sini</a></p>
     </div>
 
-    <!-- Toast Notification -->
+    <!-- Toast Notif -->
     <div id="toast" class="toast">Kamu berhasil login!</div>
 
     <script>
@@ -38,7 +38,7 @@
         // Cek apakah user sudah login sebelumnya
         if (sessionStorage.getItem("isLoggedIn") === "true") {
             // Jika user sudah login, redirect langsung ke home.html
-            window.location.href = "home.html";
+            // window.location.href = "home.html";
         }
 
         // Event listener untuk login form submit
