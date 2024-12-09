@@ -35,7 +35,7 @@
         </form>
         
         <!-- Link untuk mengarahkan pengguna yang sudah memiliki akun ke halaman Login -->
-        <a href="login.html">Sudah punya akun? Login di sini</a>
+        <a href="login.php">Sudah punya akun? Login di sini</a>
     </div>
 </body>
 </html>

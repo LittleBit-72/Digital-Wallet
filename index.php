@@ -29,10 +29,10 @@
         <!-- Container untuk tombol navigasi -->
         <div style="margin-top: 20px;">
             <!-- Tombol menuju halaman Login -->
-            <a href="login.html"><button>Login</button></a>
+            <a href="login.php"><button>Login</button></a>
             
             <!-- Tombol menuju halaman Register -->
-            <a href="register.html"><button>Register</button></a>
+            <a href="register.php"><button>Register</button></a>
         </div>
     </div>
 </body>
