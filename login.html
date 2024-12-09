@@ -35,6 +35,12 @@
             setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
         }
 
+        // Cek apakah user sudah login sebelumnya
+        if (sessionStorage.getItem("isLoggedIn") === "true") {
+            // Jika user sudah login, redirect langsung ke home.html
+            window.location.href = "home.html";
+        }
+
         // Event listener untuk login form submit
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Mencegah form di-submit
@@ -44,7 +50,11 @@
             var password = document.getElementById("password").value;
 
             if (username && password) {
-                // Jika username dan password sudah diisi, tampilkan toast
+                // Simpan status login ke sessionStorage
+                sessionStorage.setItem("isLoggedIn", "true");
+                sessionStorage.setItem("username", username);
+
+                // Tampilkan toast
                 showToast();
 
                 // Redirect ke home.html setelah 3 detik (saat toast menghilang)
